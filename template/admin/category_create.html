@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Admin</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="all,follow">
+  <!-- Bootstrap CSS-->
+  <link rel="stylesheet" href="assets/vendor/bootstrap/css/www_subdomain/bootstrap.min.css">
+  <!-- Font Awesome CSS-->
+  <link rel="stylesheet" href="assets/vendor/font-awesome/css/www_subdomain/font-awesome.min.css">
+  <!-- Custom icon font-->
+  <link rel="stylesheet" href="assets/css/www_subdomain/fontastic.css">
+  <!-- Google fonts - Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+  <!-- jQuery Circle-->
+  <link rel="stylesheet" href="assets/css/www_subdomain/grasp_mobile_progress_circle-1.0.0.min.css">
+  <!-- Custom Scrollbar-->
+  <link rel="stylesheet" href="assets/vendor/malihu-custom-scrollbar-plugin/www_subdomain/jquery.mCustomScrollbar.css">
+  <!-- theme stylesheet-->
+  <link rel="stylesheet" href="assets/css/www_subdomain/style.default.css" id="theme-stylesheet">
+  <!-- Custom stylesheet - for your changes-->
+  <link rel="stylesheet" href="assets/css/www_subdomain/custom.css">
+  <!-- Favicon-->
+  <link rel="shortcut icon" href="favicon.png">
+</head>
+
+<body>
+  <!-- Side Navbar -->
+  <nav class="side-navbar">
+    <div class="side-navbar-wrapper d-flex flex-column" style="height: 100vh">
+      <div class="sidenav-header d-flex align-items-center justify-content-center" style="flex-shrink: 0">
+        <div class="sidenav-header-inner text-center"><img src="assets/img/www_subdomain/avatar-1.jpg" alt="person"
+            class="img-fluid rounded-circle">
+          <h2 class="h5 text-uppercase">Nguyễn Văn A</h2><span class="text-uppercase">Web Developer</span>
+        </div>
+        <div class="sidenav-header-logo"><a href="index.html" class="brand-small text-center"> <strong>B</strong><strong
+              class="text-primary">D</strong></a></div>
+      </div>
+      <div class="main-menu d-flex flex-column justify-content-between" style="height: 100%">
+        <ul id="side-main-menu" class="side-menu list-unstyled">
+          <li> <a href="product.html"><i class="icon-form"></i><span>Product</span></a></li>
+          <li class="active"> <a href="category.html"><i class="icon-presentation"></i><span>Category</span></a></li>
+        </ul>
+        <a href="login.html" class="nav-link logout"><i class="fa fa-sign-out"></i><span>Logout</span></a>
+      </div>
+    </div>
+  </nav>
+  <div class="page forms-page">
+    <div class="breadcrumb-holder">
+      <div class="container-fluid">
+        <ul class="breadcrumb">
+          <li class="breadcrumb-item"><a href="category.html">Category</a></li>
+          <li class="breadcrumb-item active">Create</li>
+        </ul>
+      </div>
+    </div>
+    <section class="forms">
+      <div class="container-fluid">
+        <header>
+          <h1 class="display">Create Category</h1>
+        </header>
+        <div class="row">
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <form novalidate>
+                  <div class="form-row">
+                    <div class="form-group col col-md">
+                      <label>Name</label>
+                      <input placeholder="Name" class="form-control" required>
+                    </div>
+                    <div class="form-group col col-md">
+                      <label>Branch name</label>
+                      <select class="form-control">
+                        <option>Choose option</option>
+                        <option>Nike</option>
+                        <option>Adidas</option>
+                        <option>Bitis</option>
+                        <option>New Balance</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col">
+                      <button type="submit" class="btn btn-primary">Save</button>
+                      <button type="submit" class="btn btn-secondary">Cancel</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+  </div>
+</body>
+
+</html>
