@@ -19,13 +19,13 @@ function App() {
       <BrowserRouter>
         <MainLayout>
             <Switch>
-                <Route exact path = "/" component = {Home}/>
-                <Route exact path = "/product" component ={ProductList}/>
-                <Route exact path = "/product/:id" component = {ProductDetails}/>
-                <Route exact path = "/product/create" component = {ProductDetails}/>
-                <Route exact path = "/category" component = {CategoryList}/>
-                <Route exact path = "/category/:id" component = {CategoryDetails}/>
-                <Route exact path = "/category/create" component = {CategoryDetails}/>
+                <Route exact path = "/admin" component = {Home}/>
+                <Route exact path = "/admin/products" component ={ProductList}/>
+                <Route exact path = "/admin/products/:id" component = {ProductDetails}/>
+                <Route exact path = "/admin/product/create" component = {ProductDetails}/>
+                <Route exact path = "/admin/categories" component = {CategoryList}/>
+                <Route exact path = "/admin/categories/:id" component = {CategoryDetails}/>
+                <Route exact path = "/admin/categories/create" component = {CategoryDetails}/>
             </Switch>
         </MainLayout>
       </BrowserRouter>
