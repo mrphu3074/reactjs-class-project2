@@ -1,6 +1,6 @@
 import React from "react";
-import Categories from "../Components/CategoryList.js";
-import {CategoryConsumer, CategoryProvider} from "../Providers/CategoryListProvider.js";
+import Categories from "../../Components/admin/CategoryList.js";
+import {CategoryConsumer, CategoryProvider} from "../../Providers/CategoryListProvider.js";
 
 export default function CategoryList() {
     return(

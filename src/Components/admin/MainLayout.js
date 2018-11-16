@@ -8,17 +8,17 @@ class MainLayout extends React.Component {
     var params = window.location.pathname.split("/");
     this.state = {
       menuItems: [
-        { name: "Home", key: "home", path: "/", icon: "icon-home" },
+        { name: "Home", key: "home", path: "/admin", icon: "icon-home" },
         {
           name: "Products",
           key: "product",
-          path: "/product",
+          path: "/admin/products",
           icon: "icon-grid"
         },
         {
           name: "Categories",
           key: "category",
-          path: "/category",
+          path: "/admin/categories",
           icon: "icon-grid"
         }
       ],

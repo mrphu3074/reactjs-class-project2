@@ -1,6 +1,6 @@
 import React from "react";
-import {ProductListConsumer, ProductListProvider} from "../Providers/ProductListProvider.js";
-import ProductList from "../Components/ProductList.js";
+import {ProductListConsumer, ProductListProvider} from "../../Providers/ProductListProvider.js";
+import ProductList from "../../Components/admin/ProductList.js";
 
 export default function ProductListLanding() {
     return(

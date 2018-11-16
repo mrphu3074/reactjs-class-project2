@@ -10,7 +10,7 @@ export default function CategoryList(props) {
                 <header class="d-flex justify-content-between">
                     <h1 class="display">Categories</h1>
                     <div>
-                        <Link class="btn btn-primary" to="/category/create">Create</Link>
+                        <Link class="btn btn-primary" to="/admin/categories/create">Create</Link>
                     </div>
                 </header>
                 <div class="row">

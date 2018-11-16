@@ -12,7 +12,7 @@ function ProductList(props) {
         <header className="d-flex justify-content-between">
           <h1 className="display">Products</h1>
           <div>
-            <Link className="btn btn-primary" to='/product/create'>Create</Link>
+            <Link className="btn btn-primary" to='/admin/products/create'>Create</Link>
           </div>
         </header>
         <div className="row">

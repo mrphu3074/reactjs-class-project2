@@ -1,5 +1,9 @@
 import React from "react";
-import MainLayout from "./MainLayout.js";
+import '../../template/admin/assets/css/www_subdomain/custom.css';
+import '../../template/admin/assets/css/www_subdomain/fontastic.css';
+import '../../template/admin/assets/css/www_subdomain/grasp_mobile_progress_circle-1.0.0.min.css';
+import '../../template/admin/assets/css/www_subdomain/style.default.css';
+import '../../template/admin/assets/vendor/bootstrap/css/www_subdomain/bootstrap.min.css';
 
 export default function HomeComponent() {
     return (
