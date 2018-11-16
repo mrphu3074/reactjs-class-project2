@@ -1,8 +1,8 @@
 import React from 'react';
-import '../../template/web/css/bootstrap.min.css';
-import '../../template/web/css/font-awesome.min.css';
-import '../../template/web/css/main.css';
-import '../../template/web/css/responsive.css';
+// import '../../template/web/css/bootstrap.min.css';
+// import '../../template/web/css/font-awesome.min.css';
+// import '../../template/web/css/main.css';
+// import '../../template/web/css/responsive.css';
 
 export default function MainLayout(props) {
   return (
