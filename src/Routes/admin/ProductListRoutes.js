@@ -1,5 +1,5 @@
 import React from "react";
-import {ProductListConsumer, ProductListProvider} from "../../Providers/ProductListProvider.js";
+import {ProductListConsumer, ProductListProvider} from "../../Providers/admin/ProductListProvider.js";
 import ProductList from "../../Components/admin/ProductList.js";
 
 export default function ProductListLanding() {

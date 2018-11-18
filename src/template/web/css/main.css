@@ -5,6 +5,9 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,300,400italic,500,700,100);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,800,300,600,700);
 @import url(http://fonts.googleapis.com/css?family=Abel);
+.material-icons {
+    font-size: 18px;
+}
 body {
     font-family: 'Roboto', sans-serif;
     position: relative;
@@ -2312,12 +2315,12 @@ textarea {
     border: 1px solid#F7F7F0
 }
 
-.btn.btn-primary {
+/* .btn.btn-primary {
     background: #FE980F;
     border: 0 none;
     border-radius: 0;
     margin-top: 16px;
-}
+} */
 
 .blank-arrow {
     position: relative;
@@ -2438,4 +2441,8 @@ textarea {
 
 .contact-info .social-networks ul li a:hover {
     color: #FE980F;
+}
+/* custom */
+.Web .navbar-nav .dropdown.hover:hover > .dropdown-menu{
+    display: block;
 }

@@ -1,53 +1,21 @@
 import React from 'react';
-// import '../../template/web/css/bootstrap.min.css';
-// import '../../template/web/css/font-awesome.min.css';
-// import '../../template/web/css/main.css';
-// import '../../template/web/css/responsive.css';
+import '../../template/web/css/main.css';
+import '../../template/web/css/responsive.css';
 
 export default function MainLayout(props) {
   return (
-    <div>
+    <div className="Web">
       <header id="header">
         <div className="header-bottom">
           <div className="container">
             <div className="row">
               <div className="col-sm-9">
-                <div className="navbar-header">
-                  <button
-                    type="button"
-                    className="navbar-toggle"
-                    data-toggle="collapse"
-                    data-target=".navbar-collapse"
-                  >
-                    <span className="sr-only">Toggle navigation</span>
-                    <span className="icon-bar" />
-                    <span className="icon-bar" />
-                    <span className="icon-bar" />
-                  </button>
-                </div>
-                <div className="mainmenu pull-left">
-                  <ul className="nav navbar-nav collapse navbar-collapse">
+                <div className="mainmenu">
+                  <ul className="navbar-nav flex-row">
                     <li>
                       <a href="index.html" className="active">
                         Home
                       </a>
-                    </li>
-                    <li className="dropdown">
-                      <a href="#">
-                        Menu<i className="fa fa-angle-down" />
-                      </a>
-                      <ul role="menu" className="sub-menu">
-                        <li>
-                          <a href="#" style={{ display: 'block' }}>
-                            Sub Menu
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" style={{ display: 'block' }}>
-                            Sub Menu
-                          </a>
-                        </li>
-                      </ul>
                     </li>
                   </ul>
                 </div>
