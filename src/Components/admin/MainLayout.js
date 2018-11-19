@@ -5,7 +5,7 @@ import "../../template/admin/assets/css/www_subdomain/fontastic.css";
 import "../../template/admin/assets/css/www_subdomain/grasp_mobile_progress_circle-1.0.0.min.css";
 import "../../template/admin/assets/css/www_subdomain/style.default.css";
 import "../../template/admin/assets/vendor/bootstrap/css/www_subdomain/bootstrap.min.css";
-import { UIConsumer, UIProvider } from "../../Providers/UIProvider.js";
+import { UIConsumer, UIProvider } from "../../Providers/admin/UIProvider.js";
 
 function MainLayout(props) {
   return (
