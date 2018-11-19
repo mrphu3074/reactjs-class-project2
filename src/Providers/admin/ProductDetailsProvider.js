@@ -78,6 +78,7 @@ export class ProductDetailsProvider extends React.Component {
   };
 
   handleOnUpload = fileEl => {
+    console.log(fileEl);
     if (fileEl && fileEl.files.length > 0) {
       const formData = new FormData();
       formData.append("file", fileEl.files[0]);

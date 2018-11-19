@@ -1,4 +1,5 @@
 import React from 'react';
+import SideBar from './SideBar';
 import '../../template/web/css/main.css';
 import '../../template/web/css/responsive.css';
 
@@ -29,7 +30,17 @@ export default function MainLayout(props) {
           </div>
         </div>
       </header>
-      {props.children}
+      <section>
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-3">
+              <SideBar />
+            </div>
+            <div className="col-sm-9 padding-right">{props.children}</div>
+          </div>
+        </div>
+      </section>
+
       <footer id="footer">
         <div className="footer-bottom">
           <div className="container">

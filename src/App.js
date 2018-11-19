@@ -9,7 +9,7 @@ function App() {
     <BrowserRouter>
       <Switch>
         <Route path="/admin" component={Admin} />
-        <Route exact path="/" component={Web} />
+        <Route path="/" component={Web} />
       </Switch>
     </BrowserRouter>
   );
