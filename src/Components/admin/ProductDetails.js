@@ -89,7 +89,13 @@ class ProductDetails extends React.Component {
                           name="image"
                           onChange={this.props.handleOnChange}
                         />
-                        <button onClick={this.props.handleOnUpload}>
+                        <button onClick={() =>{
+                          const fileEl = document.getElementById("file"); 
+                          return(
+                            this.props.handleOnUpload(fileEl)
+                          );
+                        }
+                          }>
                           Upload
                         </button>
                       </div>

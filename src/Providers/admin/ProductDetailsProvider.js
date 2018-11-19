@@ -1,4 +1,5 @@
 import React from "react";
+import {Redirect} from "react-router-dom";
 const { Provider, Consumer } = React.createContext();
 
 export const ProductDetailsConsumer = Consumer;
@@ -15,6 +16,7 @@ export class ProductDetailsProvider extends React.Component {
       content: "",
       _id: ""
     },
+    isSuccess: false,
     error: null
   };
 
@@ -44,7 +46,13 @@ export class ProductDetailsProvider extends React.Component {
     })
       .then(res => res.json())
       .then(data => {
-        console.log("success");
+        if (data.status) {
+          this.setState({
+          isSuccess : true
+        })
+        }
+        
+        
       });
   };
   getProductById = productId => {
@@ -86,6 +94,9 @@ export class ProductDetailsProvider extends React.Component {
   }
 
   render() {
+    if(this.state.isSuccess === true) {
+      return <Redirect to='/admin/products'/>
+    }
     return (
       <Provider
         value={{
