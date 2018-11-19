@@ -3,9 +3,8 @@ import Category from "../../Components/admin/CategoryDetails.js";
 import {
   CategoryDetailConsumer,
   CategoryDetailProvider
-} from "../../Providers/CategoryDetailsProvider.js";
+} from "../../Providers/admin/CategoryDetailsProvider.js";
 export default function CategoryRoute(props) {
-    console.log("categor", props);
     const categoryId = props.match.params.id;
   return (
     <CategoryDetailProvider>

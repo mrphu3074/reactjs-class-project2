@@ -2,7 +2,7 @@ import React from "react";
 import {
   CategoryProvider,
   CategoryConsumer
-} from "../../Providers/CategoryListProvider.js";
+} from "../../Providers/admin/CategoryListProvider.js";
 class ProductDetails extends React.Component {
   componentDidMount() {
     this.props.getProduct();
@@ -85,6 +85,7 @@ class ProductDetails extends React.Component {
                           type="file"
                           placeholder="URL"
                           className="form-control"
+                          id = "file"
                           name="image"
                           onChange={this.props.handleOnChange}
                         />

@@ -3,7 +3,7 @@ import Product from "../../Components/admin/ProductDetails.js";
 import {
   ProductDetailsConsumer,
   ProductDetailsProvider
-} from "../../Providers/ProductDetailsProvider.js";
+} from "../../Providers/admin/ProductDetailsProvider.js";
 export default function ProductDetails(props) {
   const productId = props.match.params.id;
   const fileEl = document.getElementById("file");
@@ -15,7 +15,7 @@ export default function ProductDetails(props) {
             product={value.state.product}
             handleOnSubmit={value.handleOnSubmit}
             handleOnChange={value.handleOnChange}
-            handleOnUpload={()=>value.handleOnUpload}
+            handleOnUpload={()=>value.handleOnUpload(fileEl)}
             getProduct={() => value.getProductById(productId)}
           />
         )}
