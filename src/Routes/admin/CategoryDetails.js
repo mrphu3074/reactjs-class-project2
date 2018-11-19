@@ -1,8 +1,24 @@
 import React from "react";
 import Category from "../../Components/admin/CategoryDetails.js";
-
-export default function CategoryRoute() {
-    return(
-        <Category/>
-    );
+import {
+  CategoryDetailConsumer,
+  CategoryDetailProvider
+} from "../../Providers/CategoryDetailsProvider.js";
+export default function CategoryRoute(props) {
+    console.log("categor", props);
+    const categoryId = props.match.params.id;
+  return (
+    <CategoryDetailProvider>
+      <CategoryDetailConsumer>
+        {value => (
+          <Category
+            category={value.state.category}
+            handleOnSubmit={value.handleOnSubmit}
+            handleOnChange={value.handleOnChange}
+            getCategory = {()=>value.getCategoryById(categoryId)}
+          />
+        )}
+      </CategoryDetailConsumer>
+    </CategoryDetailProvider>
+  );
 }

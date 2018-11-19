@@ -6,7 +6,7 @@ function PostItem(props) {
     return(
         <tr>
             <td>{product.image}</td>
-            <Link to={`/product/${product.id}`}><td>{product.id}</td></Link>
+            <Link to={`/admin/products/${product._id}`}><td>{product._id}</td></Link>
             <td>{product.name}</td>
             <td>{product.introduction}</td>
             <td>{product.price}</td>

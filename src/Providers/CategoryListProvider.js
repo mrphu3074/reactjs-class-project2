@@ -3,20 +3,24 @@ const {Provider, Consumer} = React.createContext();
 
 export const CategoryConsumer = Consumer;
 export class CategoryProvider extends React.Component {
+    API = "https://fast-temple-19334.herokuapp.com/api/categories";
     state = {
         loading: true,
-        list: [
-            {
-                id: 1,
-                name: "Giay",
-                branch: "Adidas"
-            },
-            {
-                id: 2,
-                name: "Ao",
-                branch: "Nike"
-            }
-        ]
+        list: []
+    }
+
+    getData = () => {
+        fetch(this.API)
+        .then(res=> res.json())
+        .then(res=> {
+            this.setState({
+                list: res.data
+            });
+        })
+    }
+
+    componentDidMount() {
+        this.getData();
     }
 
     render(){
