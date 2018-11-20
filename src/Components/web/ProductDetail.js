@@ -2,13 +2,13 @@ import React from 'react';
 
 export default function ProductDetail(props) {
   const { item } = props;
-  console.log(item);
+  
   return (
     <div>
-      <div className="product-details">
+      <div className="product-details row">
         <div className="col-sm-5">
           <div className="view-product">
-            <img src="images/product-details/1.jpg" alt="" />
+            <img src={item.image} alt="" />
           </div>
         </div>
         <div className="col-sm-7">
@@ -26,17 +26,10 @@ export default function ProductDetail(props) {
               <b>Condition:</b> New
             </p>
             <p>
-              <b>Brand:</b> E-SHOPPER
+              <b>Category:</b> {item.category}
             </p>
-            <span>
-              <span>{item.price}</span>
-              {/* <label>Quantity:</label>
-              <input type="text" value="1" />
-              <button type="button" className="btn btn-fefault cart">
-                <i className="fa fa-shopping-cart" />
-                Add to cart
-              </button> */}
-            </span>
+            <span>{item.price}</span>
+            <p>{item.introduction}</p>
           </div>
         </div>
       </div>

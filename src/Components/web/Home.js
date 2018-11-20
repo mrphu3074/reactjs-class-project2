@@ -1,5 +1,5 @@
 import React from 'react';
-import SideBar from './SideBar';
+import isEmpty from 'lodash/isEmpty';
 import Product from './Product';
 import {
   ProductProvider,
@@ -14,6 +14,10 @@ export default function Home() {
         <ProductProvider>
           <ProductConsumer>
             {value => {
+              if (isEmpty(value.list)) {
+                return <div className="col">No Product</div>;
+              }
+
               return value.list.map((product, index) => (
                 <div key={index} className="col-sm-4">
                   <Product item={product} />

@@ -1,12 +1,26 @@
 import React from 'react';
+import queryString from 'query-string';
+import { withRouter } from 'react-router-dom';
 
 const { Consumer, Provider } = React.createContext();
 
 export const SiderBarConsumer = Consumer;
-export class SideBarProvider extends React.Component {
+class SideBarProvider extends React.Component {
   state = {
-    list: [{ name: 'kids' }, { name: 'adidas' }]
+    list: [],
+    activeItem: this.activeItem
   };
+
+  get activeItem() {
+    const params = window.location.search.split('?')[1];
+    let activeItem = 'All';
+
+    if (params) {
+      activeItem = params.split('=')[1];
+    }
+
+    return activeItem;
+  }
 
   fetchCategories = () => {
     const url = 'https://fast-temple-19334.herokuapp.com/api/categories';
@@ -15,7 +29,8 @@ export class SideBarProvider extends React.Component {
       .then(res => res.json())
       .then(res => {
         if (res.status) {
-          this.setState({ list: res.data });
+          const list = [{ name: 'All' }, ...res.data];
+          this.setState({ list });
         }
       });
   };
@@ -24,11 +39,22 @@ export class SideBarProvider extends React.Component {
     this.fetchCategories();
   }
 
+  componentWillReceiveProps(nextProps) {
+    const search = queryString.parse(this.props.location.search);
+    const nextSearch = queryString.parse(nextProps.location.search);
+
+    if(search.category != nextSearch.category) {
+      this.setState({ activeItem: nextSearch.category || 'All' });
+    }
+  }
+
   render() {
     return (
       <Provider
         value={{
-          list: this.state.list
+          list: this.state.list,
+          activeItem: this.state.activeItem,
+          handleOnClickMenu: this.handleOnClickMenu
         }}
       >
         {this.props.children}
@@ -36,3 +62,6 @@ export class SideBarProvider extends React.Component {
     );
   }
 }
+
+SideBarProvider = withRouter(SideBarProvider);
+export { SideBarProvider };

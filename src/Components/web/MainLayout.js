@@ -1,7 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import SideBar from './SideBar';
 import '../../template/web/css/main.css';
 import '../../template/web/css/responsive.css';
+import './MainLayout.css';
 
 export default function MainLayout(props) {
   return (
@@ -14,9 +16,7 @@ export default function MainLayout(props) {
                 <div className="mainmenu">
                   <ul className="navbar-nav flex-row">
                     <li>
-                      <a href="index.html" className="active">
-                        Home
-                      </a>
+                      <Link to="/">Home</Link>
                     </li>
                   </ul>
                 </div>
