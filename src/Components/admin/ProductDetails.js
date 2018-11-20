@@ -91,9 +91,7 @@ class ProductDetails extends React.Component {
                         />
                         <button onClick={() =>{
                           const fileEl = document.getElementById("file"); 
-                          return(
                             this.props.handleOnUpload(fileEl)
-                          );
                         }
                           }>
                           Upload

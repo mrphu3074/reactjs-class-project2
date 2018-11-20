@@ -12,6 +12,7 @@ export class CategoryDetailProvider extends React.Component {
       branch: "",
       _id:""
     },
+    isSuccess: false,
     error: null
   };
   handleOnChange = e => {
@@ -39,7 +40,11 @@ export class CategoryDetailProvider extends React.Component {
     })
       .then(res => res.json())
       .then(data => {
-        console.log("success");
+        if (data.status) {
+          this.setState({
+          isSuccess : true
+        })
+        }
       });
   };
   getCategoryById = categoryId => {
@@ -64,6 +69,9 @@ export class CategoryDetailProvider extends React.Component {
     }
   };
   render() {
+    if(this.state.isSuccess === true) {
+      return <Redirect to='/admin/categories'/>
+    }
     return (
       <Provider
         value={{
